@@ -1,0 +1,3 @@
+BrazilCenter\Process\mqClient\RabbitMqProcessClient.class
+BrazilCenter\Process\MqInterface\MqConnector.class
+BrazilCenter\Process\ClientInterface\IServiceConnect.class
