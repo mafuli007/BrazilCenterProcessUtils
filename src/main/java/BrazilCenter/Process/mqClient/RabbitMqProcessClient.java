@@ -20,7 +20,7 @@ public class RabbitMqProcessClient extends MqConnector implements IServiceConnec
 	}
 
 	public RabbitMqProcessClient(String endpointName, Configuration confr) throws IOException {
-		super(endpointName);
+		super(endpointName, confr.getMqHostIp(), confr.getMqUserName(), confr.getMqUserPasswd());
 		this.conf = confr;
 		// TODO Auto-generated constructor stub
 	}

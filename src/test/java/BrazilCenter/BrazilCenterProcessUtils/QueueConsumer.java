@@ -19,7 +19,7 @@ import BrazilCenter.models.Task;
 public class QueueConsumer extends MqConnector implements Runnable, Consumer{
      
     public QueueConsumer(String endPointName) throws IOException{
-        super(endPointName);        
+        super(endPointName, "192.168.", endPointName, endPointName);        
     }
      
     public void run() {

@@ -19,17 +19,17 @@ public abstract class MqConnector{
 	protected Connection connection;
 	protected String endPointName;
 
-	public MqConnector(String endpointName) throws IOException {
+	public MqConnector(String endpointName, String hostIp, String userName, String passwd) throws IOException {
 		this.endPointName = endpointName;
 
 		// Create a connection factory
 		ConnectionFactory factory = new ConnectionFactory();
 
 		// hostname of your rabbitmq server
-		factory.setHost("192.168.183.129");
+		factory.setHost(hostIp);
 		
-		factory.setUsername("admin");
-		factory.setPassword("admin");
+		factory.setUsername(userName);
+		factory.setPassword(passwd);
 		factory.setAutomaticRecoveryEnabled(true);
 
 		// getting a connection
